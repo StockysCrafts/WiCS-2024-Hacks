@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Questions</title>
+  <link rel="stylesheet" href="questions.css">
+</head>
+
+<body>
+    <div class="question test">
+        <h1>What is your favorite place to study at UT?</h1>
+        <a class="container">
+            <button onclick="incLock()">PCL</button>
+            <button onclick="incAnti()">Dorm/Apartment</button>
+            <button onclick="incPal()">West Mall</button>
+            <button onclick="incHook()">UT Tower</button>
+            <button onclick="incFrat()">Coffee Shop</button>
+        </a>
+    </div>
+
+    <div class="question2">
+        <h1>What’s your go to meal at the dining hall?</h1>
+        <a class="container">
+            <button onclick="incFrat()">Pizza</button>
+            <button onclick="incPal()">Chicken Sandwich</button>
+            <button onclick="incAnti()">Wrap</button>
+            <button onclick="incLock()">Pasta</button>
+            <button onclick="incHook()">Salad</button>
+        </a>
+    </div>
+
+    <div class="question3">
+        <h1>What do you like to do on the weekends?</h1>
+        <a class="container">
+            <button onclick="incFrat()">Hit up the frats or 6th</button>
+            <button onclick="incLock()">Co-Study Sessions</button>
+            <button onclick="incPal()">Emptying my wallet at the thrift</button>
+            <button onclick="incAnti()">Go back home</button>
+            <button onclick="incHook()">Grind at Greg Gym</button>
+        </a>
+    </div>
+
+    <div class="question4">
+        <h1>What would be your second choice major?</h1>
+        <a class="container">
+            <button onclick="incAnti()">Biology</button>
+            <button onclick="incPal()">Radio, Television, and Film</button>
+            <button onclick="incLock()">Computer Science</button>
+            <button onclick="incFrat()">Business</button>
+            <button onclick="incHook()">Government</button>
+        </a>
+    </div>
+
+    <div class="question5">
+        <h1>What's your favorite campus celebrity or famous alumni?</h1>
+        <a class="container">
+            <button onclick="incHook()">Matthew McConaughey</button>
+            <button onclick="incFrat()">Arch Manning</button>
+            <button onclick="incLock()">Neil DeGrasse Tyson</button>
+            <button onclick="incAnti()">Glen Powell</button>
+            <button onclick="incPal()">Kendra Scott</button>
+        </a>
+    </div>
+
+    <div class="question6">
+        <h1>Choose a dorm</h1>
+        <a class="container">
+            <button onclick="incPal()">Jester</button>
+            <button onclick="incLock()">Honors Quad</button>
+            <button onclick="incFrat()">Castilian</button>
+            <button onclick="incHook()">San Jac</button>
+            <button onclick="incAnti()">Kinsolving</button>
+        </a>
+    </div>
+
+    <div class="question7">
+        <h1>Which UGS would you choose?</h1>
+        <a class="container">
+            <button onclick="incHook()">College Football</button>
+            <button onclick="incFrat()">Young People and Drugs</button>
+            <button onclick="incAnti()">Love, Mating, and the Brain</button>
+            <button onclick="incPal()">Movies from Down Under</button>
+            <button onclick="incLock()">Women and Madness</button>
+        </a>
+    </div>
+
+    <div class="question8">
+        <h1>What is your favorite off campus location?</h1>
+        <a class="container">
+            <button onclick="incFrat()">Barton Springs</button>
+            <button onclick="incAnti()">Zilker Park</button>
+            <button onclick="incHook()">Guad</button>
+            <button onclick="incLock()">Austin Public Library</button>
+            <button onclick="incPal()">The Domain</button>
+        </a>
+    </div>
+
+    <div class="question9">
+        <h1>What’s the worst major?</h1>
+        <a class="container">
+            <button onclick="incPal()">Computer Science</button>
+            <button onclick="incLock()">Business</button>
+            <button onclick="incHook()">Communications</button>
+            <button onclick="incFrat()">Electrical Engineering</button>
+            <button onclick="incAnti()">Government</button>
+        </a>
+    </div>
+
+    <div class="question10">
+        <h1>What's your favorite off campus food?</h1>
+        <a class="container">
+            <button onclick="incPal()">P Terrys</button>
+            <button onclick="incLock()">Chipotle</button>
+            <button onclick="incHook()">Pluckers</button>
+            <button onclick="incFrat()">Canes</button>
+            <button onclick="incAnti()">Dollar Slice Club</button>
+        </a>
+    </div>
+
+    <button class="endingButton" onclick="switchPage()">Show me my Barbie!!</button>
+    
+    </body>
+
+</html>
+
+<script>
+    var fratBarbie = 0;
+    var hookBarbie = 0;
+    var lockedBarbie = 0;
+    var palleteBarbie = 0;
+    var antisocialBarbie = 0;
+    var questionNumber = 0;
+
+    var barbieDiv = document.getElementById('barbieDiv');
+    renderFrat();
+    renderHook();
+    renderLock();
+    renderPal();
+    renderAnti();
+
+    function incFrat() {
+        fratBarbie++;
+        questionNumber++;
+        renderFrat();
+    }
+
+    function incHook() {
+        hookBarbie++;
+        questionNumber++;
+        renderHook();
+    }
+
+    function incLock() {
+        lockedBarbie++;
+        questionNumber++;
+        renderLock();
+    }
+
+    function incPal() {
+        palleteBarbie++;
+        questionNumber++;
+        renderPal();
+    }
+
+    function incAnti() {
+        antisocialBarbie++;
+        questionNumber++;
+        renderAnti();
+    }
+
+    function renderFrat() {
+        barbieDiv.innerHTML = 'You have ' + fratBarbie + ' frat barbie answers.';
+        barbieDiv.innerHTML = 'You have ' + questionNumber + ' answers.';
+    }
+
+    function renderHook() {
+        barbieDiv.innerHTML = 'You have ' + hookBarbie + ' hook barbie answers.';
+        barbieDiv.innerHTML = 'You have ' + questionNumber + ' answers.';
+    }
+
+    function renderLock() {
+        barbieDiv.innerHTML = 'You have ' + lockedBarbie + ' lock barbie answers.';
+        barbieDiv.innerHTML = 'You have ' + questionNumber + ' answers.';
+    }
+
+    function renderPal() {
+        barbieDiv.innerHTML = 'You have ' + palleteBarbie + ' pal barbie answers.';
+        barbieDiv.innerHTML = 'You have ' + questionNumber + ' answers.';
+    }
+
+    function renderAnti() {
+        barbieDiv.innerHTML = 'You have ' + antisocialBarbie + ' anti barbie answers.';
+        barbieDiv.innerHTML = 'You have ' + questionNumber + ' answers.';
+    }
+
+    function switchPage() {
+        if(questionNumber >= 10) {
+            if(fratBarbie > hookBarbie && fratBarbie > lockedBarbie && fratBarbie > palleteBarbie && fratBarbie > antisocialBarbie) {
+                window.location.href = "fratSweetheart.html";
+            } else if(hookBarbie > fratBarbie && hookBarbie > lockedBarbie && hookBarbie > palleteBarbie && hookBarbie > antisocialBarbie) {
+                window.location.href = "hookEmBarbie.html";
+            } else if(lockedBarbie > fratBarbie && lockedBarbie > hookBarbie && lockedBarbie > palleteBarbie && lockedBarbie > antisocialBarbie ) {
+                window.location.href = "lockedIn.html";
+            } else if(palleteBarbie > fratBarbie && palleteBarbie > lockedBarbie && palleteBarbie > hookBarbie && palleteBarbie > antisocialBarbie) {
+                window.location.href = "pallettePrincess.html";
+            } else {
+                window.location.href = "antisocialAngel.html";
+            }
+        }
+        
+    }
+    window.onload = switchPage;
+</script>

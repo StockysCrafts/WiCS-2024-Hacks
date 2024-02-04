@@ -1,0 +1,39 @@
+body {
+    background-color: lightpink;
+    font-size: x-large;
+}
+
+h2 {
+    color: palevioletred;
+    font-family: myFirstFont;
+}
+
+h1 {
+    color: palevioletred;
+    font-family: secondFont;
+
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url('Starborn.otf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: secondFont;
+    src: url('Geranium.otf');
+    font-weight: bold;
+}
+
+img {
+    height: 10 px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+p {
+    color: palevioletred;
+    font-family: secondFont;
+}
